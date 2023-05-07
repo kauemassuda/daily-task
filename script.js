@@ -23,18 +23,18 @@ let month = today.getMonth();
 let year = today.getFullYear();
 
 const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  "Janeiro",
+  "Fevereiro",
+  "Março",
+  "Abril",
+  "Maio",
+  "Junho",
+  "Julho",
+  "Agosto",
+  "Setembro",
+  "Outubro",
+  "Novembro",
+  "Dezembro",
 ];
 
 // const eventsArr = [
@@ -261,7 +261,7 @@ function updateEvents(date) {
   });
   if (events === "") {
     events = `<div class="no-event">
-            <h3>No Events</h3>
+            <h3>Sem Eventos</h3>
         </div>`;
   }
   eventsContainer.innerHTML = events;
@@ -291,7 +291,6 @@ addEventTitle.addEventListener("input", (e) => {
 function defineProperty() {
   var osccred = document.createElement("div");
   osccred.innerHTML =
-    "A Project By <a href='https://www.youtube.com/channel/UCiUtBDVaSmMGKxg1HYeK-BQ' target=_blank>Open Source Coding</a>";
   osccred.style.position = "absolute";
   osccred.style.bottom = "0";
   osccred.style.right = "0";
@@ -335,7 +334,7 @@ addEventSubmit.addEventListener("click", () => {
   const eventTimeFrom = addEventFrom.value;
   const eventTimeTo = addEventTo.value;
   if (eventTitle === "" || eventTimeFrom === "" || eventTimeTo === "") {
-    alert("Please fill all the fields");
+    alert("Por favor preencha todos os campos");
     return;
   }
 
@@ -350,7 +349,7 @@ addEventSubmit.addEventListener("click", () => {
     timeToArr[0] > 23 ||
     timeToArr[1] > 59
   ) {
-    alert("Invalid Time Format");
+    alert("Formato de hora inválido");
     return;
   }
 
@@ -373,7 +372,7 @@ addEventSubmit.addEventListener("click", () => {
     }
   });
   if (eventExist) {
-    alert("Event already added");
+    alert("Evento já adicionado");
     return;
   }
   const newEvent = {
@@ -421,7 +420,7 @@ addEventSubmit.addEventListener("click", () => {
 //function to delete event when clicked on event
 eventsContainer.addEventListener("click", (e) => {
   if (e.target.classList.contains("event")) {
-    if (confirm("Are you sure you want to delete this event?")) {
+    if (confirm("Tem certeza de que deseja excluir este evento?")) {
       const eventTitle = e.target.children[0].children[1].innerHTML;
       eventsArr.forEach((event) => {
         if (
