@@ -7,6 +7,11 @@
 body {
     font-family: 'Open Sans', sans-serif;
 }
+.logo {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
 .container {
     display: flex;
     justify-content: center;
@@ -203,13 +208,13 @@ input:-webkit-autofill
     border-bottom-left-radius: 0;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    animation: slidein 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+    animation: slidein 1.3s;
 
     z-index: 12;
 }
 
 .sign-up-js .content::before {
-    animation: slideout 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+    animation: slideout 1.3s; 
 
     z-index: 12;
 }
@@ -233,16 +238,16 @@ input:-webkit-autofill
 
     z-index: -1;
     position: relative;
-    animation: deslocamentoEsq 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+    animation: deslocamentoEsq 1.3s; 
 }
 
 .sign-up-js .second-content .second-column {
     position: relative;
     z-index: -1;
-    animation: deslocamentoDir 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+    animation: deslocamentoDir 1.3s; 
 }
 
-/*ANIMAÇÃOO CSS PARA O CONTEÚDO*/
+
 
 @keyframes deslocamentoEsq {
 
@@ -297,7 +302,7 @@ input:-webkit-autofill
 }
 
 
-/*ANIMAÇÃO CSS*/
+
 
 @keyframes slidein {
 
@@ -355,7 +360,6 @@ input:-webkit-autofill
     }
 }
 
-/*VERSÃO MOBILE*/
 @media screen and (max-width: 1040px) {
     .content {
         width: 100%;
