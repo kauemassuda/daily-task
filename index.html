@@ -30,7 +30,6 @@
                         <i class="far fa-user icon-modify"></i>
                         <input type="text" placeholder="Nome">
                     </label>
-                    
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
                         <input type="email" placeholder="Email">
@@ -40,8 +39,6 @@
                         <i class="fas fa-lock icon-modify"></i>
                         <input type="password" placeholder="Senha">
                     </label>
-                    
-                    
                     <button class="btn btn-second">Cadastre-se</button>        
                 </form>
             </div><!-- second column -->
@@ -51,7 +48,6 @@
                 <h2 class="title title-primary">Olá amigo</h2>
                 <p class="description description-primary">Faça seu cadastro</p>
                 <p class="description description-primary">e comece a jornada conosco</p>
-                <a class="password" href="calendarioindex.html">Calendario</a><!-- apaga esssa linha -->
                 <button id="signup" class="btn btn-primary">Se cadastrar</button>
             </div>
             <div class="second-column">
@@ -60,20 +56,23 @@
                     <ul class="list-social-media"ul>
                 </div><!-- social media -->
                 <p class="description description-second">use seu e-mail e senha para entrar</p>
-                <form class="form">
+              
+              
+              
+                <form class="form" method="post" action="verifica.php">
                 
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="Email">
+                        <input id="email" name="email" type="email" placeholder="Email">
                     </label>
                 
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Senha">
+                        <input id="senha" name="senha" type="password" placeholder="Senha">
                     </label>
                 
                     <a class="password" href="esqueceu.html">Esqueceu sua senha?</a>
-                    <button class="btn btn-second">Entrar</button>
+                    <button id="login" class="btn btn-second" type="submit" value="Enviar">Entrar</button>
                 </form>
             </div><!-- second column -->
         </div><!-- second-content -->
