@@ -32,7 +32,7 @@ if (mysqli_num_rows($result) > 0) {
         header("Location: calendarioindex.html");
     }
 } else {
-    echo "Senha ou email incorreto.";
+    header("Location: erro.html");
 }
 
 // Fechar a conexão com o banco de dados
