@@ -10,25 +10,18 @@
 <body>
     <main class="container">
         <h2>Esqueceu sua senha?</h2>
-        <form action="">
+        <form class="form" method="post" action="esqueci.php">
             <div class="input-field">
-                <input type="text" name="email" id="email"
-                    placeholder="Email">
+                <input id="email" name="email" type="email" placeholder="Email">
                 <div class="underline"></div>
             </div>
             <div class="input-field">
-                <input type="password" name="password" id="password"
-                    placeholder="Nova senha">
-                <div class="underline"></div>
-                <input type="password" name="password" id="password"
-                    placeholder="Confirmar nova senha">
+                <input id="senha" name="senha" type="password" placeholder="Nova Senha">
                 <div class="underline"></div>
             </div>
 
-            <input type="submit" value="Enviar">
-                </div>
-            </div>
-        </div>
+            <input type="submit" value="Trocar senha">
+        </form>
     </main>
 </body>
 </html>
