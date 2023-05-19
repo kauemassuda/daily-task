@@ -28,19 +28,19 @@
                     <ul class="list-social-media"></ul>
                 </div><!-- social media -->
                 <p class="description description-second">ou use seu e-mail para se cadastrar</p>
-                <form class="form">
+                <form class="form" method="post" action="cadastro.php">
                     <label class="label-input" for="">
                         <i class="far fa-user icon-modify"></i>
-                        <input type="text" placeholder="Nome">
+                        <input id="nome" name="nome" type="nome" placeholder="Nome">
                     </label>
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="Email">
+                        <input id="email" name="email" type="email" placeholder="Email">
                     </label>
                     
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Senha">
+                        <input id="senha" name="senha" type="password" placeholder="Senha">
                     </label>
                     <button class="btn btn-second">Cadastre-se</button>        
                 </form>
