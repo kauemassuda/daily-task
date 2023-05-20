@@ -20,7 +20,7 @@ if ($senha != $t) {
     // Atualiza a senha no banco de dados
     $sql = "UPDATE usuario SET senha = '$senha' WHERE email = '$email'";
     if ($conn->query($sql) === TRUE) {
-        header("Location: index.html");
+        header("Location: senhatrocada.html");
     } else {
         echo "Erro ao alterar a senha: " . $conn->error;
     }
