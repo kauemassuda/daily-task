@@ -8,29 +8,24 @@ $dbname = "daily_tasks"; // Nome do banco de dados
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 // Verifique a conexão
-if (!$conn) {
-    die("Falha na conexão com o banco de dados: " . mysqli_connect_error());
+if ($conn->connect_error) {
+    die("Erro na conexão com o banco de dados: " . $conn->connect_error);
 }
+// Obtém os dados do formulário
 $email = $_POST['email'];
-$nova_senha = trim($_POST['senha']);
-// Verifique se o email existe no banco de dados
-$sql_verificar = "SELECT * FROM usuario WHERE email = '$email'";
-$resultado = mysqli_query($conn, $sql_verificar);
-
-if (mysqli_num_rows($resultado) == 1) {
-    // Atualize a senha no banco de dados
-    $senha_hash_nova = password_hash($nova_senha, PASSWORD_DEFAULT);
-    $sql_atualizar = "UPDATE usuario SET senha = '$senha_hash_nova' WHERE email = '$email'";
-    
-    if (mysqli_query($conn, $sql_atualizar)) {
-        echo "Senha alterada com sucesso!";
+$senha = $_POST['senha'];
+$t = $_POST['jioehdshsfbrjhfghdhffdshfkjerhhyufgye'];
+// Verifica se a nova senha e a confirmação da senha coincidem
+if ($senha != $t) {
+    // Atualiza a senha no banco de dados
+    $sql = "UPDATE usuario SET senha = '$senha' WHERE email = '$email'";
+    if ($conn->query($sql) === TRUE) {
+        header("Location: index.html");
     } else {
-        echo "Erro ao atualizar a senha: " . mysqli_error($conn);
+        echo "Erro ao alterar a senha: " . $conn->error;
     }
-} else {
-    echo "Email não encontrado!";
-}
+}   
 
-// Feche a conexão com o banco de dados
-mysqli_close($conn);
+// Fecha a conexão com o banco de dados
+$conn->close();
 ?>
