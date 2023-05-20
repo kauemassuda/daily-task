@@ -11,7 +11,7 @@
             <div class="first-column">
                 <h2 class="title title-primary"></h2>
                 <p class="description description-primary">Senha atualizada com sucesso.</p>
-                <a href="index.html" class="btn">Voltar para a tela de login</a>
+            <a href="index.html" class="btn">Voltar para a tela de login</a>
             </div>
         </div>
     </div>
