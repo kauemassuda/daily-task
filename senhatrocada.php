@@ -4,6 +4,21 @@
     <title>Informação de Senha Atualizada</title>
     <link rel="stylesheet" href="styleinf.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <style>
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #6908a1;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #7a08c5;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -11,7 +26,7 @@
             <div class="first-column">
                 <h2 class="title title-primary"></h2>
                 <p class="description description-primary">Senha atualizada com sucesso.</p>
-            <a href="index.html" class="btn">Voltar para a tela de login</a>
+                <a href="index.html" class="btn">Voltar para a tela de login</a>
             </div>
         </div>
     </div>
