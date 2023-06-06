@@ -379,6 +379,7 @@ addEventSubmit.addEventListener("click", () => {
     title: eventTitle,
     time: timeFrom + " - " + timeTo,
   };
+
   console.log(newEvent);
   console.log(activeDay);
   let eventAdded = false;
@@ -394,7 +395,7 @@ addEventSubmit.addEventListener("click", () => {
       }
     });
   }
-
+  alert("evento adicionado!");
   if (!eventAdded) {
     eventsArr.push({
       day: activeDay,
@@ -406,9 +407,9 @@ addEventSubmit.addEventListener("click", () => {
 
   console.log(eventsArr);
   addEventWrapper.classList.remove("active");
-  addEventTitle.value = "";
-  addEventFrom.value = "";
-  addEventTo.value = "";
+  //addEventTitle.value = "";
+ // addEventFrom.value = "";
+ // addEventTo.value = "";
   updateEvents(activeDay);
   //select active day and add event class if not added
   const activeDayEl = document.querySelector(".day.active");
